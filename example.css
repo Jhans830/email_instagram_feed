@@ -1,0 +1,30 @@
+%%[
+
+var @lookupValue
+set @lookupValue = "1"
+set @DEColumn1 = Lookup("DATA EXTENSION NAME", "ig_image1", "id", @lookupValue)
+set @DEColumn2 = Lookup("DATA EXTENSION NAME", "ig_image2", "id", @lookupValue)
+set @DEColumn3 = Lookup("DATA EXTENSION NAME", "ig_image3", "id", @lookupValue)
+set @DEColumn4 = Lookup("DATA EXTENSION NAME", "ig_image4", "id", @lookupValue)
+]%%
+
+.ig1 {
+background: url(%%=v(@DEColumn1)=%%);
+width: 200px;
+height: 200px;
+}
+.ig2 {
+background: url(%%=v(@DEColumn2)=%%);
+width: 200px;
+height: 200px;
+}
+.ig3 {
+background: url(%%=v(@DEColumn3)=%%);
+width: 200px;
+height: 200px;
+}
+.ig4 {
+background: url(%%=v(@DEColumn4)=%%);
+width: 200px;
+height: 200px;
+}
